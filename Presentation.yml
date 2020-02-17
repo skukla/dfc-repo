@@ -1,0 +1,567 @@
+Presentation:
+  Intro Section:
+    - Title slide
+    - Presenters
+    What We Heard:
+      - Summary of RFP
+      - High-level Demo Agenda
+    Presentation Agenda:
+      - What is Magento
+      - Magento and Headless
+      - Case Studies
+      - Proposed Solution (Demo)
+      - Product Roadmap
+  Section 1: "What is Magento?"
+    Sales summmary (1 slide): 
+      - "A fully-featured, market-tested eCommerce Platform that's built to be a flexible framework for Commerce."
+        - Can serve as either an end-to-end commerce application or a reference application within a larger business landscape
+        - Modular and flexible with a extensive API built in REST and GraphQL
+        - Used with a variety of heads -- anything from Wordpress to Drupal to AEM and others.
+    Magento Platform Capabilities (1 slide):
+      - Brief overview of the native features that Magento delivers and our approach to customization
+  Section 2: "Magento and Headless"
+    What We Mean By Headless:
+      - Being headless provides different value propositions depending on who's asking for the definition.
+        - For business users, it's the ability to combine functionality from several business systems into a single CMS.
+        - For developers, it allows separating business logic from the frontend tech stack so that they can develop the frontend they need using whatever tech stack they believe works best for them.
+      Magento can function in both of these worlds: 
+        - We deliver a fully-featured application with a mature frontend.
+        - We deliver a mature API that covers a breadth of commerce functionality, and can be expanded as needed.
+        - We deliver a component-based frontend architecture that can be used to create Progressive Web Apps (ReactJS).
+        - Other component-based approaches are also available if desired (VueJS)
+    Headless Deployment Approaches:
+      Fully Headless:
+        - The experience is rendered as a Single Page Application which is built using a unified set of Javascript components. Each piece of the experience is owned by a different provider and delivered to the SPA frontend;
+        - The experience is rendered by the primary CMS. The CMS is made aware of domain-specific elements via API. (E.g. product reccs from Bloomreach, Cart from eComm, content from CMS)
+      Side-by-side:
+        - Different storefront experiences (pages) are rendered by different applications and routed to via URL
+        - The application which owns each page is determined based on the purpose that page serves as well as how often the content on that page is planned to be updated by business users.
+          - Ex. Shopping cart is commerce-focused and minimally updated (Commerce)
+          - Ex. Product Detail pages are commerce-focused, and not frequently updated (Commerce)
+          - Ex. The Homepage is brand and content-focused and frequently updated (CMS)
+          - Ex. Category Listing pages are a mix of commerce and content and are frequently updated (CMS)
+        - Functionality owned by different back-office systems is integrated with the application that owns each experience via API.  Sometimes multiple integrations between one back-office system may be needed.
+          - Ex. Integration with a tax service is commerce-focused and would be handled via a connector to Magento Commerce.
+          - Ex. Search and merchandising (Product Reccs) are owned by Bloomreach and displayed on both Product Detail pages and Category Listing pages.  Magento owns the product catalog and displays the PDP, so an integration between Bloomreach and Magento is needed.  Drupal owns the CLP, so a further integration between Bloomreach and Drupal would also be needed to display Bloomreach content from Magento in pages owned by Drupal.
+  Section 3: "Case Studies"
+    - Quicken (Fully Headless with Drupal and Magento)
+    - Wilson Sports (Side-by-Side with Drupal and Magento)
+  Section 4: "Proposed Solution for DFC"
+    Business Use Case:
+        Insight: Spring is fast approaching and is a prime time for home remodelling projects.  DFC wants to capitalize on this by releasing a new product collection and targeting customers who are looking to remodel their homes.
+        Initiative: The Re-Modeller Campaign
+            Step 1: Define target customers
+            Step 2: Create a New Product collection
+            Step 3: Merchandise products in the collection
+            Step 4: Use a promotion to incentivize purchase of products
+            Step 5: Create content to advertise the collection and its promotions
+            Step 6: Preview and launch the campaign
+    Business User Personas:
+      Business User 1: 
+        Name: Christine, the Catalog Manager
+        Role: Christine manages the data in the product catalog, including product additions and updates.
+      Business User 2:
+        Name: Fred, the Merchandiser
+        Role: Fred manages product relationships and decides how to best position products for purchase.
+      Business User 3:
+        Name: Bill, the Marketer
+        Role: Bill is reponsible for commerce-related promotions.
+      Business User 4:
+        Name: Shelly, the Content Creator
+        Role: Shelly is responsible for commerce-related content.
+    Customer Personas:
+        Customer 1: 
+          Name: Bob and his wife, Jeanne -- new homeowners and soon-to-be parents
+          Story: Bob and his wife, Jeanne are in the market to build their first home, and have reached the point where it's time to choose fixtures. They've settled on Delta after running into some models at a friend's house. Normally, Bob would head to Home Depot to purchase fixtures; however, the couple has also just found out that they're having their first child in a matter of months, so saving money is especially top of mind. Not wanting to sacrifice on quality, Bob wonders if Delta sells direct, and if he might go the refurbished route.
+        Customer 2:
+          Name: Bob and his wife, Jeanne -- retiring home owners ready for a re-model
+          Story: Bob is set to retire soon and he and his wife, Jeanne, are looking to remodel their kitchen and bathroom. Bob starts a search for fixtures because he hasn’t paid attention to them in years! He notices that most of his searches feature Delta’s products and he’s interested to see their Outlet store as he believes it'll give him a high-quality, stylish product from a brand he can trust, at a price he knows he can afford.
+    Colorized Product Demo (Native Features):
+      Master Flow (Luma):
+        Multisite Overview:
+          Brands:
+            - Luma
+            - Venia
+          Markets:
+            - US
+            - DE
+          Channels:
+            - B2C
+            - B2B
+          Companies:
+            - Terra Outfitters
+          Business Structure:
+            Websites:
+              - Luma B2C
+              - Luma B2B
+            Stores:
+              - Luma B2C Store
+              - Venia B2C Store
+              - Luma B2B Store
+            Store Views:
+              - Luma US English
+              - Luma German
+              - Venia US English
+              - Venia German
+        Customer Journey:
+          Homepage:
+            - Rich content
+            - Prommotion Messaging
+          Category Landing Page:
+            - Attributes and flexible data model
+            - Filters
+            - Wishlist
+            - Product Comparison
+          Product Detail Page:
+            - Attributes
+            - Related Products
+          Shopping Cart:
+            - Promo codes
+          Checkout:
+            - Shipping Methods
+            - Payment types
+          Customer Account:
+            - Orders, Invoices, Shipments
+            - Password reset
+            - Return management
+        Product Information Management:
+          - Product types
+          - Grids
+          - Attributes
+          - Category Management
+        Product Merchandising:
+          - Related Products, Cross-sells, Upsells
+          - Merchandising Categories
+        Promotions:
+          - Shopping cart rules
+          - Catalog rules
+        Content Management:
+          - Promotional messaging
+        Staging and Preview:
+          - Product information updates
+          - Promotions
+        B2B:
+          - Quick Order
+          - Account Hierarchy
+          - Shared Catalogs
+          - Quotes
+      Custom Flow (DFC):
+        Multisite Overview:
+          Brands: 
+            - DFC Outlet
+          Markets: 
+            - US
+            - CA
+          Business Structure:
+            Website 1:
+              Market: US
+              Code: delta_us
+              Store(s): Delta Outlet Store (US)
+              Root Category: Delta Catalog
+              Store View(s): 
+                Code: us_en
+                Name: US English
+                Language: US English
+                Currency: USD
+            Website 2:
+              Market: CA
+              Code: delta_ca
+              Store(s): Delta Outlet Store (CA)
+              Root Category: Delta Catalog
+              Store Views:
+                View 1:
+                  Code: ca_en
+                  Name: CA English
+                  Language: CA English
+                  Currency: CAD
+                View 2:
+                  Code: ca_fr 
+                  Name: CA French
+                  Language: CA English
+                  Currency: CAD
+        Admin Journey:
+          Christine:
+            Create a New Collection:
+              - Create a new collection option
+              - Create a new product for the new collection
+              - (OPTIONAL) Import other products in the collection
+          Fred:
+            Merchandise products in the collection:
+              - Relate products in the new collection to each other
+              - Relate products in the new collection to other collections targeted for remodellers
+              - Create a dynamic category for the new collection and position products
+              - Create campaign for the new collection's release to the public
+          Bill:
+            Use a promotion to incentivize purchase:
+              - Create a catalog promotion giving 25% off products in the new collection
+              - Attach the promotion to the product release campaign
+          Shelly:
+            Create content to advertise the collection and its promotions:
+              - Create homepage content to advertise the new collection specifically to remodellers
+        Bob's Customer Journey:
+          Homepage:
+            - Rich content
+            - Promotion Messaging
+          Category Landing Page:
+            - Attributes and the flexible data model
+            - Filters
+            - Wishlist
+            - Product Comparison
+          Product Detail Page:
+            - Attributes
+            - Related Products
+          Shopping Cart:
+            - Promo codes
+          Checkout:
+            - Shipping Methods
+            - Payment types
+          Customer Account:
+            - Orders, Invoices, Shipments
+            - Password reset
+            - Return management
+        B2B (Optional):
+            - Quick Order
+            - Account Hierarchy
+            - Shared Catalogs
+            - Quotes
+    Conceptual Solution Map:
+      Product Data Flow:
+        - ERP (SAP)
+        - MDM (Stibo STEP)
+        - CRM (Salesforce?)
+        - Ecom (Magento)
+        - Search and Merch (Bloomreach)
+        - CMS (Drupal)
+      Page Breakdown:
+        - Home Page
+        - CLP
+        - PDP
+        - Cart
+        - Customer Account Dashboard
+        - Favorites List
+        - Landing Pages (with Merchandising)
+  Section 5: "Product Roadmap"
+Demo Data:
+  Client URL: https://www.deltafaucet.com/
+  VM URL: http://outlet.deltafaucet.com/
+  Base Settings: See https://github.com/skukla/vm-from-scratch/blob/master/BUILDING-THE-B2C-DEMO-CASES.md#business-operations-setup
+  Multisite Settings:
+    Site name: Delta Faucet Outlet US
+    Store Name: Delta Faucet Outlet US Store
+    Store View Name: US English
+    Store View Code: default
+  Categories:
+    - Kitchen
+      - Kitchen Faucets
+      - Specialty Faucets
+      - Accessories
+    - Bathroom
+      - Showering
+      - Bathing
+      - Toilets
+      - Accessories
+    - Collections
+      - Addison™
+      - Broderick™
+      - Bowery™
+      - Carlisle™
+      - Collins™
+      - Delta
+      - Dorval™
+      - Dunsley®
+      - Emmett®
+      - Foundations®
+  Custom Attribute Sets:
+    - Delta Faucet
+      - Kitchen
+      - Bathroom
+  Custom Product Attributes:
+    Common:
+      - Collection
+        - Addison™
+        - Broderick™
+        - Bowery™
+        - Carlisle™
+        - Collins™
+        - Delta
+        - Dorval™
+        - Dunsley®
+        - Emmett®
+        - Foundations®
+      - Finish
+        - Arctic Stainless - #C5C7C9
+        - Black Stainless - #BBB8B8
+        - Champagne Bronze - #CAB189
+        - Chrome - #E5E9EC
+        - Matte Black - #424446
+        - Polished Nickel - #C7BDB1
+        - Spotshield Brushed Nickel - #C4C0BA
+        - Spotshield Stainless - #C3BFB9
+        - Stainless - #CFC8C0
+        - Venetian Bronze - #5C5756
+      - Feature
+        - SoftTouch
+        - No-Lead Compliant
+        - Multi-Flow Spray Wand
+        - Water-Efficient
+        - SpotShield®
+        - Innovex®
+        - Palm®
+        - ActivTouch®
+        - Integrated Diverter
+      - Technology
+        - DIAMOND™ Seal Technology
+        - Electronic Faucet
+        - MagnaTite® Docking
+        - ShieldSpray®
+        - VoiceIQ™
+        - Touch2O®
+        - Ambient Lighting
+        - H2Okinetic®
+      - Style
+        - Transitional
+        - Tradational
+        - Contemporary          
+      - Number of Handles
+        - Single Handle
+        - Two Handles
+      - Number of Holes
+        - 1 Hole
+        - 2 Holes
+        - 3 Holes
+        - 4 Holes
+      - Drain Type
+        - Less pop-up
+        - N/A
+      - Max Flow Rate
+        - 18 gpm @ 80 psi, 68.1 L/min @ 552 kPa
+        - 2 gpm @ 80 psi, 7.6 L/min @ 552 kPa
+        - 1.75 gpm @ 80 psi, 6.6 L/min @ 552 kPa
+        - 1.6 gpm @ 80 psi, 6.1 L/min @ 552 kPa
+        - 1.50 gpm @ 80 psi, 5.7 L/min @ 550 kPa
+    Kitchen:
+      - Faucet Type
+        - Pull-Down
+        - Pull-Out
+        - Sprayer Included
+        - Wall Mount
+        - Touch Activated
+        - Single Handle
+        - Two Handle
+        - Gooseneck/High Arc
+      - Faucet Valve Type
+        - Electronic with DIAMOND™ Seal Valve
+        - Electronic with Euromotion DIAMOND™ Valve
+        - Euromotion DIAMOND™ Valve
+        - DIAMOND™ Seal Valve
+    Shower:
+      - Shower Type
+        - Shower Bases and Walls
+        - One-Piece Showers
+        - Shower Bases
+        - Alcove Shower Bases
+        - Corner Shower Bases
+      - Shower Valve Type
+        - Washerless stem cartridge
+        - Ceramic valve
+        - Valve body only
+        - Dual-function thermostatic cartridge
+        - Dual-function pressure balance cartridge
+        - Single-function pressure balance cartridge
+        - N/A
+  Products:
+    Kitchen:
+      Addison:
+        Product 1:  
+          Name: Single Handle Pull-Down Kitchen Faucet with Touch2O® Technology and Soap Dispenser
+          URL: https://www.deltafaucet.com/kitchen/product/9192T-SD-DST
+        Product 2:
+          Name: Transitional Beverage Faucet
+          URL: https://www.deltafaucet.com/kitchen/product/1977-DST
+      Broderick:
+        Product 3:
+          Name: Two Handle Pull-Down Bridge Kitchen Faucet
+          URL: https://www.deltafaucet.com/kitchen/product/2390L-DST
+        Product 4:
+          Name: Single Handle Pull-Down Kitchen Faucet
+          URL: https://www.deltafaucet.com/kitchen/product/9190-DST
+      Collins:
+        Product 5:
+          Name: Single Handle Pull-Out Kitchen Faucet
+          URL: https://www.deltafaucet.com/kitchen/product/4140-DST
+        Product 6:
+          Name: Single Handle Water-Efficient Kitchen Faucet with Spray
+          URL: https://www.deltafaucet.com/kitchen/product/440-WE-DST
+      Dunsley:
+        Product 7:
+          Name: Dunsley Single Handle Pull Down Kitchen Faucet with Touch 2O and VoiceIQ Technology
+          URL: https://www.deltafaucet.com/kitchen/product/19756TZV-SPSD-DST
+        Product 8:
+          Name: Single Handle Pull-Down Kitchen Faucet with ShieldSpray
+          URL: https://www.deltafaucet.com/kitchen/product/19756Z-SPSD-DST
+          Product Video: https://media.deltafaucet.com/elvis/Video/PRODUCT_19756Z-SPSD-DST.mp4
+      Emmett:
+        Product 9:
+          Name: Two Handle Kitchen Faucet with Spray
+          URL: https://www.deltafaucet.com/kitchen/product/21742LF-SP
+      Foundations:
+        Product 10:
+          Name: Single Handle Pull-Out Kitchen Faucet with Soap Dispenser
+          URL: https://www.deltafaucet.com/kitchen/product/B4310LF-SD
+    Shower: 
+      Addison:
+        Product 11:
+          Name: TempAssure® 17T Series H2Okinetic® Tub & Shower Trim
+          URL:  https://www.deltafaucet.com/bathroom/product/T17T492-WE
+        Product 12:
+          Name: TempAssure® 17T Series H2Okinetic® Shower Trim
+          URL: https://www.deltafaucet.com/bathroom/product/T17T292-WE
+      Bowery:
+        Product 13:
+          Name: Monitor® 14 Series H2Okinetic® Tub & Shower Trim
+          URL: https://www.deltafaucet.com/bathroom/product/T14448
+        Product 14:
+          Name: Monitor® 14 Series Shower Trim - Less Head
+          URL: https://www.deltafaucet.com/bathroom/product/T14248-LHD
+      Carlisle:
+        Product 15:
+          Name: Monitor® 17 Series Shower with In2ition® Two-In-One Shower
+          URL: https://www.deltafaucet.com/bathroom/product/174939D-SS-I
+        Product 16:
+          Name: Monitor® 17 Series H2Okinetic® Shower Only
+          URL: https://www.deltafaucet.com/bathroom/product/172939-H2O
+      Dorval:
+        Product 17:
+          Name: TempAssure 17T Series Tub & Shower Trim
+          URL: https://www.deltafaucet.com/bathroom/product/T17T456
+        Product 18:
+          Name: TempAssure 17T Series Shower Trim
+          URL: https://www.deltafaucet.com/bathroom/product/T17T256
+      Emmett:
+        Product 19:
+          Name: Monitor® 14 Series Tub & Shower Trim
+          URL: https://www.deltafaucet.com/bathroom/product/144742-SP
+      Foundations:
+        Product 20:
+          Name: Single Handle Tub and Shower
+          URL: https://www.deltafaucet.com/bathroom/product/B114900
+    Accessories:
+      Product 21:
+        Name: MultiChoice® Universal Tub / Shower Rough - Universal Inlets / Outlets
+        URL: https://www.deltafaucet.com/bathroom/product/R10000-UNBX
+      Product 22:
+        Name: Single Handle Tub and Shower
+        URL: https://www.deltafaucet.com/bathroom/product/B114900C
+  Custom Customer Attributes:
+    - Interest Level
+      - Professional
+      - DIY Enthusiast
+    - Interest Area
+      - Building your home
+      - Re-modelling your home
+      - Looking for replacement parts
+    - Product Type Interest Areas
+      - Kitchen Faucets
+      - Kitchen Accessories
+      - Specialty Faucets
+      - Sink Faucets
+      - Showering
+      - Bathing
+      - Toilets
+  Customers:
+  Companies:
+  Segments:
+    - Guest Customers
+    - Customers Looking To Remodel
+    - Customers Interested in Bathroom Activities
+    - Customers Interested in Kitchen Activities 
+  Category Permissions:
+    - Addison Category for Remodellers?
+  Promotions:
+    - 25% off specific product collection targeted to "Remodellers" campaign
+  Related Products Rules:
+    - Products in the same collection (Fred)
+    - For shower products in all collections except Carlisle, include the Rough Valve part (SKU R10000-UNBX) (Fred)
+  Content:
+    - Homepage content based on remodeller segment (Shelly)
+    - Featured categories for Remodellers (Shelly)
+  Admin User Roles:
+    - Catalog Manager
+    - Merchandiser
+    - Marketer
+    - Content Creator
+  Admin Users (Add to Autofill):
+    User 1:
+      Name: Christine Jacobs
+      Username: christine@deltafaucet.com
+      Password: Password1
+    User 2:
+      Name: Fred Mills
+      Username: fred@deltafaucet.com
+      Password: Password1
+    User 3:
+      Name: Bill Thomas
+      Username: bill@deltafaucet.com
+      Password: Password1
+    User 4:
+      Name: Shelly Smith
+      Username: shelly@deltafaucet.com
+      Password: Password1
+  Colors:
+    Buttons: #AC0535
+  Extensions:
+    Extension:
+      Name: ECE Tools
+      Repo: git@gitlab.the1umastory.com:md/ece-tools.git
+      Require: magentoese/ece-tools
+      Revision: 2002.0.14.x-dev
+    Extension:
+      Name: CWeagans Composer Patches
+      Repo: N/A
+      Require: cweagans/composer-patches
+      Revision: ^1.6
+    Extension:
+      Name: Magento Framework Data Collection
+      Repo: https://github.com/skukla/module-magento-framework-data-collection.git
+      Require: skukla/module-magento-framework-data-collection
+      Revision: dev-master
+    Extension:
+      Name: SC Tools
+      Repo: git@github.com:PMET-public/module-sctools.git
+      Require: magentoese/module-sctools
+      Revision: dev-master
+    Extension:
+      Name: Theme Customizer
+      Repo: git@github.com:PMET-public/module-themecustomizer.git
+      Require: magentoese/module-themecustomizer
+      Revision: dev-master
+    Extension:
+      Name: Custom Theme
+      Repo: git@github.com:skukla/theme-frontend-custom.git
+      Require: skukla/theme-frontend-custom
+      Revision: dev-master
+    Extension:
+      Name: Autofill
+      Repo: git@github.com:PMET-public/module-autofill.git
+      Require: magentoese/module-autofill
+      Revision: dev-master
+    Extension:
+      Name: Attribute Importer
+      Repo: git@github.com:skukla/zt-attribute-import-final.git
+      Require: zt/module-attribute-import
+      Revision: dev-master
+  Commands:
+    - Get fresh code: composer create-project --repository-url=https://repo.magento.com/ magento/project-enterprise-edition=^2.3.4 . && composer require magento/extension-b2b:^1.1
+    - Get Patches: git clone https://github.com/skukla/m2-patches.git
+    - Install: ./bin/magento setup:install --db-host=localhost --db-name=magento --db-user=magento --db-password=password --backend-frontname=admin --base-url=http://luma.com/ --language=en_US --timezone=America/Los_Angeles --currency=USD --admin-lastname=Admin --admin-firstname=Admin --admin-email=admin@luma.com --admin-user=admin --admin-password=admin4tls --use-rewrites=1 --cleanup-database --session-save=db
+    - Copy patches: www && cp -r ../cloud/m2-hotfixes . && cp m2-patches/kukla-patches/* m2-hotfixes/
+    - Update permissions: own
+    - Production Mode: prod-mode
+    - Enable Cron: enable-cron
+    - Start Consumers for B2B: start-all-consumers
+    - Shortcut Reinstall: www && cp composer.json ../new-composer.json && rm -rf * .* && composer install && ./bin/magento setup:install --db-host=localhost --db-name=magento --db-user=magento --db-password=password --backend-frontname=admin --base-url=http://luma.com/ --language=en_US --timezone=America/Los_Angeles --currency=USD --admin-lastname=Admin --admin-firstname=Admin --admin-email=admin@luma.com --admin-user=admin --admin-password=admin4tls --use-rewrites=1 --cleanup-database --session-save=db && set-url && own && prod-mode && enable-cron && start-all-consumers
+Misc Details:
+    Bounteous PIM Article: https://www.bounteous.com/insights/2019/06/14/anatomy-pim-implementation/
+
+
+"patches-file": "m2-hotfixes/patches/patches.json"
